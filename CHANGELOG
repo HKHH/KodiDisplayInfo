@@ -1,6 +1,7 @@
 Autor: Bjoern Reichert <opendisplaycase[at]gmx.net>
 License: GNU General Public License (GNU GPLv3)
 
+v7.X    Add support for display resolution 800x480
 v7.0    Option added to write directly into fbdev, SDL_FBDEV is also activ for older pygame sdl
         Refactor code
         Update GitHub 27.10.2024

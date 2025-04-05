@@ -109,6 +109,34 @@ class DrawToDisplayAudioThumbnail:
         self.__drawsetting['videoinfo.time.margin_left'] = 14
         self.__drawsetting['videoinfo.time.margin_top'] = 83
         
+    def setupdrawsetting800x480(self):       
+        self.__drawsetting['videoinfo.image_width_height'] = 200
+        
+        self.__drawsetting['videoinfo.margin_top_media_album'] = 33
+        self.__drawsetting['videoinfo.margin_top_media_artist'] = 69
+        self.__drawsetting['videoinfo.margin_top_media_artist.maxcount'] = 2
+        self.__drawsetting['videoinfo.margin_top_media_title'] = 69
+        self.__drawsetting['videoinfo.margin_top_media_title.maxcount'] = 3
+        
+        self.__drawsetting['videoinfo.progressbar.margin_top'] = 205
+        self.__drawsetting['videoinfo.progressbar.height'] = 34
+        
+        self.__drawsetting['videoinfo.button.play'] = self.__config_default['basedirpath']+'img/button_play_800x480.png'
+        self.__drawsetting['videoinfo.button.break'] = self.__config_default['basedirpath']+'img/button_break_800x480.png'
+    
+        self.__drawsetting['videoinfo.title.fontsize'] = 60
+        self.__drawsetting['videoinfo.title.height_margin'] = 5
+    
+        self.__drawsetting['videoinfo.time_now.fontsize'] = 80
+        self.__drawsetting['videoinfo.time_now.height_margin'] = 86
+        self.__drawsetting['videoinfo.time_end.fontsize'] = 80
+        self.__drawsetting['videoinfo.time_end.height_margin'] = 86
+        
+        self.__drawsetting['videoinfo.time.fontsize'] = 81
+        self.__drawsetting['videoinfo.time.margin_left'] = 14
+        self.__drawsetting['videoinfo.time.margin_top'] = 83
+
+
     def setthumbnail(self, url, file):
         max_width = self.__drawsetting['videoinfo.image_width_height']-20
         max_heigth = self.__drawsetting['videoinfo.image_width_height']-20

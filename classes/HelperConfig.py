@@ -83,7 +83,7 @@ class HelperConfig:
 
         if self.__configParser.has_option('DISPLAY', 'RESOLUTION'):
             temp = self.__configParser.get('DISPLAY', 'RESOLUTION')
-            if temp == "320x240" or temp == "480x272" or temp == "480x320":
+            if temp == "320x240" or temp == "480x272" or temp == "480x320" or temp == "800x480":
                 self.__config_default['display.resolution'] = temp
             else:
                 self.__helper.printout("[warning]    ", self.__config_default['mesg.yellow'])

@@ -44,7 +44,7 @@ config_default = {
     "KODI.webserver.user":          "",
     "KODI.webserver.pass":          "",
 
-    "display.resolution":           "320x240",
+    "display.resolution":           "800x480",
 
     "config.screenmodus_video":     "time",
     "config.formattime_video":      "minutes",
@@ -83,7 +83,7 @@ def main():
     helper.printout("Python " + version)
 
     helper.printout("[info]    ", config_default['mesg.cyan'])
-    helper.printout("Start: KodiDisplayInfo")
+    helper.printout("Start: Kodi Display Info")
 
     pygame.init()
     screen = pygame.display.set_mode(getattr(draw_default, 'screen' + config_default['display.resolution'])(), 0, 32)

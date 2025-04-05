@@ -88,6 +88,25 @@ class DrawToDisplayVideoTime:
         self.__drawsetting['videoinfo.time.margin_left'] = 14
         self.__drawsetting['videoinfo.time.margin_top'] = 83
         
+    def setupdrawsetting800x480(self):       
+        self.__drawsetting['videoinfo.progressbar.margin_top'] = 120
+        self.__drawsetting['videoinfo.progressbar.height'] = 34
+        
+        self.__drawsetting['videoinfo.button.play'] = self.__config_default['basedirpath']+'img/button_play_800x480.png'
+        self.__drawsetting['videoinfo.button.break'] = self.__config_default['basedirpath']+'img/button_break_800x480.png'
+    
+        self.__drawsetting['videoinfo.title.fontsize'] = 60
+        self.__drawsetting['videoinfo.title.height_margin'] = 5
+    
+        self.__drawsetting['videoinfo.time_now.fontsize'] = 80
+        self.__drawsetting['videoinfo.time_now.height_margin'] = 86
+        self.__drawsetting['videoinfo.time_end.fontsize'] = 80
+        self.__drawsetting['videoinfo.time_end.height_margin'] = 86
+        
+        self.__drawsetting['videoinfo.time.fontsize'] = 81
+        self.__drawsetting['videoinfo.time.margin_left'] = 14
+        self.__drawsetting['videoinfo.time.margin_top'] = 83
+
     def drawprogressbar(self, margin_top = 0):
         rect_bar = self.__pygame.Rect((10, self.__drawsetting['videoinfo.progressbar.margin_top']+margin_top), (self.__screen.get_width()-20, self.__drawsetting['videoinfo.progressbar.height']))
         
@@ -117,6 +136,10 @@ class DrawToDisplayVideoTime:
         lines = self.wraplines(video_title, self.__drawsetting['videoinfo.title.fontsize'])
         if len(lines) > 1:
             second_title_height_margin = 0
+            if self.__config_default['display.resolution'] == "800x480":
+                videoinfo_title_fontsize = 49
+                margin_top = -22
+                second_title_height_margin = -46
             if self.__config_default['display.resolution'] == "480x320":
                 videoinfo_title_fontsize = 49
                 margin_top = -22

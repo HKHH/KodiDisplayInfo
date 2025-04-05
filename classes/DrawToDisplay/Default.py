@@ -42,6 +42,10 @@ class DrawToDisplayDefault:
     @staticmethod
     def screen480x320():
         return 480, 320
+
+    @staticmethod
+    def screen800x480():
+        return 800, 480
     
     def setupdrawsetting320x240(self):
         self.__drawsetting['startscreen.logo'] = self.__config_default['basedirpath']+'img/kodi_logo_320x240.png'
@@ -55,7 +59,12 @@ class DrawToDisplayDefault:
         self.__drawsetting['startscreen.logo'] = self.__config_default['basedirpath']+'img/kodi_logo_480x320.png'
         self.__drawsetting['startscreen.clock.fontsize'] = 75
         self.__drawsetting['startscreen.clock.height_margin'] = 118
-    
+ 
+    def setupdrawsetting800x480(self):
+        self.__drawsetting['startscreen.logo'] = self.__config_default['basedirpath']+'img/kodi_logo_800x480.png'
+        self.__drawsetting['startscreen.clock.fontsize'] = 75
+        self.__drawsetting['startscreen.clock.height_margin'] = 118
+   
     def setinfotext(self, text, color):
         self.__default_info_text = text
         self.__default_info_color = color
@@ -82,7 +91,7 @@ class DrawToDisplayDefault:
         if self.__default_info_text != '':
             self.__infotextkodi(self.__default_info_text, self.__default_info_color)
         else:
-            self.__infotextkodi("KodiDisplayInfo", self.__config_default['color.white'])
+            self.__infotextkodi("Kodi Display Info", self.__config_default['color.white'])
 
         if self.__img_logo is not None:
             x = (self.__screen.get_width()/2) - (self.__img_logo.get_rect().width/2)
