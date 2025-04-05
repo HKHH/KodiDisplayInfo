@@ -7,6 +7,7 @@ Supported screen resolutions
 * 320x240 -> 2.8 inch or 3.2 inch
 * 480x272 -> 4.3 inch
 * 480x320 -> 3.5 inch or 4.0 inch
+* 800x480 -> 5.0 inch
 
 like Watterott RPi Display B/B+ 2.8", Adafruit PiTFT (Plus) 3.5" 480x320, TinyLCD 3.5" and so on ...
 
